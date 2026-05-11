@@ -1,0 +1,21 @@
+{
+  "models": {
+    "default_provider": "anthropic",
+    "providers": {
+      "anthropic": {
+        "type": "anthropic",
+        "auth": "api-key",
+        "apiKey": "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" 
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local"
+  },
+  "skills": {
+    "zapier": {
+      "apiKey": "a38c23f085ab132fd2ad598edaf71264"
+    }
+  }
+}
+

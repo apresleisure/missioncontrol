@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Apres Leisure | All Day, Every Day - Outdoor Lifestyle Brand Supporting Planet, Mind & Health</title>
+  <meta name="description" content="The adventure is the excuse. The community is the point. Create your Apres AlterEgo, wear QR-equipped gear, and support environmental conservation, mental health, and cancer research with every scan.">
+  <meta name="keywords" content="outdoor lifestyle brand, sustainable outdoor apparel, mental health charity, cancer research fundraising, environmental conservation, outdoor community, cause-driven brand, QR code apparel, adventure lifestyle, outdoor collectibles, alter ego creator, planet rider, mind guardian">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Apres Leisure | All Day, Every Day">
+  <meta property="og:description" content="A cause-led outdoor lifestyle brand. Create your AlterEgo, wear the lore, support the causes that matter.">
+  <meta property="og:url" content="https://apresleisure.com/">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts - Optimized Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================
+       WORDPRESS ASTRA COMPATIBILITY LAYER
+       CRITICAL: Must be first for override priority
+       ========================================== */
+    
+    /* Force full-width on Astra theme */
+    .ast-container,
+    .site-content .ast-container,
+    .ast-separate-container .ast-article-post,
+    .ast-separate-container .ast-article-single,
+    .site-content,
+    .entry-content,
+    .page .entry-content {
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Remove Astra default spacing */
+    .ast-separate-container .site-content > .ast-container {
+      padding: 0 !important;
+    }
+    
+    /* Override Astra typography */
+    #primary {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Ensure no Astra sidebar conflicts */
+    .ast-page-builder-template .site-content > .ast-container {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+    
+    /* ==========================================
+       APRES LEISURE DESIGN SYSTEM
+       ========================================== */
+    
+    :root {
+      /* Brand Colors */
+      --cyan: #00f3ff;
+      --pink: #ff007f;
+      --amber: #ffbf00;
+      --green: #39ff14;
+      
+      /* Backgrounds */
+      --bg-black: #000000;
+      --bg-dark: #050505;
+      --bg-charcoal: #0d0d0d;
+      --bg-gray: #1a1a1a;
+      
+      /* Text Colors */
+      --text-white: #ffffff;
+      --text-light: #b0b0b0;
+      --text-gray: #888888;
+      --text-dim: #444444;
+      
+      /* UI Elements */
+      --border: #1a1a1a;
+      
+      /* Typography */
+      --font-display: 'Bebas Neue', impact, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+      
+      /* Spacing Scale */
+      --s1: 8px;
+      --s2: 16px;
+      --s3: 24px;
+      --s4: 32px;
+      --s5: 48px;
+      --s6: 64px;
+      --s7: 80px;
+      --s8: 120px;
+    }
+    
+    /* ==========================================
+       BASE RESET & PERFORMANCE
+       ========================================== */
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    
+    body {
+      background: var(--bg-dark);
+      color: var(--text-white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+    }
+    
+    /* Full-width container for WordPress */
+    .apres-page {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow-x: hidden;
+    }
+    
+    /* Subtle texture overlay - GPU accelerated */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      will-change: transform;
+    }
+    
+    /* ==========================================
+       NAVIGATION - Fixed & Optimized
+       ========================================== */
+    
+    .apres-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(5, 5, 5, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      padding: var(--s2) var(--s3);
+      transition: background 0.3s ease;
+    }
+    
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: var(--s5);
+      list-style: none;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-menu a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--cyan);
+    }
+    
+    .nav-cta {
+      background: linear-gradient(135deg, var(--cyan), var(--pink)) !important;
+      color: var(--bg-black) !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 243, 255, 0.4);
+      color: var(--bg-black) !important;
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: var(--s1);
+      line-height: 1;
+    }
+    
+    /* ==========================================
+       HERO SECTION
+       ========================================== */
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: calc(var(--s8) + 60px) var(--s3) var(--s8);
+      background: radial-gradient(circle at center, #111 0%, var(--bg-dark) 100%);
+    }
+    
+    .hero-content {
+      max-width: 1100px;
+    }
+    
+    .hero-status {
+      font-family: var(--font-mono);
+      color: var(--cyan);
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      margin-bottom: var(--s3);
+      text-transform: uppercase;
+    }
+    
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 12vw, 8rem);
+      line-height: 0.85;
+      margin: 0 0 var(--s5);
+      color: var(--text-white);
+    }
+    
+    .hero-title .highlight {
+      color: var(--cyan);
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+      color: var(--text-light);
+      max-width: 700px;
+      margin: 0 auto var(--s6);
+      line-height: 1.7;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      gap: var(--s3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 18px 48px;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      color: var(--bg-black);
+      box-shadow: 0 8px 30px rgba(0, 243, 255, 0.4);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 40px rgba(255, 0, 127, 0.5);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-white);
+      border: 2px solid var(--border);
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0, 243, 255, 0.05);
+      transform: translateY(-4px);
+    }
+    
+    /* ==========================================
+       3 PILLARS SECTION
+       ========================================== */
+    
+    .pillars-section {
+      padding: var(--s8) var(--s3);
+      background: var(--bg-black);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--s7);
+    }
+    
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      margin-bottom: var(--s2);
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .section-header p {
+      font-size: 1.125rem;
+      color: var(--text-gray);
+      font-style: italic;
+    }
+    
+    .pillars-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--s4);
+    }
+    
+    .pillar-card {
+      background: var(--bg-charcoal);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: var(--s5) var(--s4);
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--cyan);
+      box-shadow: 0 20px 60px rgba(0, 243, 255, 0.2);
+    }
+    
+    .pillar-icon {
+      font-size: 4rem;
+      margin-bottom: var(--s3);
+      display: block;
+      line-height: 1;
+    }
+    
+    .pillar-card h3 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin-bottom: var(--s2);
+      color: var(--cyan);
+      line-height: 1;
+    }
+    
+    .pillar-card p {
+      color: var(--text-gray);
+      line-height: 1.7;
+      margin-bottom: var(--s3);
+    }
+    
+    .pillar-link {
+      display: inline-block;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+    }
+    
+    .pillar-link:hover {
+      color: var(--pink);
+    }
+    
+    .pillar-link::after {
+      content: ' →';
+    }
+    
+    /* ==========================================
+       PROTOCOLS GRID
+       ========================================== */
+    
+    .protocols-section {
+      background: var(--bg-gray);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .protocols-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--bg-gray);
+    }
+    
+    .protocol-card {
+      background: var(--bg-dark);
+      padding: var(--s6) var(--s4);
+      transition: background 0.3s ease;
+    }
+    
+    .protocol-card:hover {
+      background: #0a0a0a;
+    }
+    
+    .protocol-card.featured {
+      background: #0a0a0a;
+    }
+    
+    .protocol-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--pink);
+      text-transform: uppercase;
+      margin-bottom: var(--s2);
+      letter-spacing: 0.1em;
+    }
+    
+    .protocol-card.featured .protocol-label {
+      color: var(--cyan);
+    }
+    
+    .protocol-card h3 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin: 0 0 var(--s2);
+      color: var(--text-white);
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    
+    .protocol-card.featured h3 {
+      color: var(--cyan);
+    }
+    
+    .protocol-card p {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    /* ==========================================
+       CAUSE DASHBOARD - Updated
+       ========================================== */
+    
+    .cause-section {
+      padding: var(--s8) var(--s3);
+      background: var(--bg-dark);
+    }
+    
+    .cause-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .cause-header {
+      border-left: 5px solid var(--amber);
+      padding-left: var(--s4);
+      margin-bottom: var(--s6);
+    }
+    
+    .cause-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      margin: 0 0 var(--s1);
+      color: var(--text-white);
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    
+    .cause-header p {
+      font-family: var(--font-mono);
+      color: var(--amber);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .qr-card {
+      display: grid;
+      grid-template-columns: 100px 1fr 200px;
+      background: var(--bg-charcoal);
+      border: 1px solid var(--border);
+      padding: var(--s5);
+      margin-bottom: var(--s3);
+      align-items: center;
+      gap: var(--s4);
+      transition: all 0.3s ease;
+    }
+    
+    .qr-card:hover {
+      border-color: var(--amber);
+      box-shadow: 0 0 20px rgba(255, 191, 0, 0.15);
+    }
+    
+    .qr-id {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      color: var(--bg-gray);
+      -webkit-text-stroke: 1px var(--amber);
+      line-height: 1;
+    }
+    
+    .qr-content h4 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      margin: 0 0 var(--s1);
+      color: var(--amber);
+      line-height: 1.1;
+    }
+    
+    .qr-content p {
+      color: var(--text-gray);
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .qr-stats {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-align: right;
+      color: var(--text-dim);
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+    
+    /* ==========================================
+       PRODUCTS SECTION
+       ========================================== */
+    
+    .products-section {
+      padding: var(--s8) var(--s3);
+      background: #0a0a0a;
+    }
+    
+    .products-label {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--amber);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: var(--s2);
+      text-align: center;
+    }
+    
+    .products-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--s5);
+    }
+    
+    .product-card {
+      background: var(--bg-charcoal);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--cyan);
+      box-shadow: 0 20px 60px rgba(0, 243, 255, 0.25);
+    }
+    
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, var(--bg-gray), #0a0a0a);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: var(--s2);
+      right: var(--s2);
+      background: var(--pink);
+      color: var(--bg-black);
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    .product-placeholder {
+      font-size: 5rem;
+      opacity: 0.3;
+      line-height: 1;
+    }
+    
+    .product-info {
+      padding: var(--s5);
+    }
+    
+    .product-info h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: var(--s1);
+      color: var(--text-white);
+      line-height: 1;
+    }
+    
+    .product-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--s3);
+    }
+    
+    .product-info p {
+      color: var(--text-gray);
+      line-height: 1.6;
+      margin-bottom: var(--s3);
+      font-size: 0.9375rem;
+    }
+    
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--s3);
+      padding-top: var(--s3);
+      border-top: 1px solid var(--border);
+    }
+    
+    .product-price {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--amber);
+      line-height: 1;
+    }
+    
+    .product-qr {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--green);
+      background: rgba(57, 255, 20, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--green);
+    }
+    
+    .product-cta {
+      display: block;
+      width: 100%;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      color: var(--bg-black);
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .product-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 243, 255, 0.4);
+    }
+    
+    /* ==========================================
+       ALTEREGO CTA
+       ========================================== */
+    
+    .alterego-section {
+      background: var(--pink);
+      color: var(--bg-black);
+      padding: var(--s7) var(--s4);
+      text-align: center;
+    }
+    
+    .alterego-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 4rem);
+      margin: 0 0 var(--s2);
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    
+    .alterego-section p {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      margin-bottom: var(--s4);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .alterego-section a {
+      display: inline-block;
+      background: var(--bg-black);
+      color: var(--text-white);
+      padding: 20px 48px;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .alterego-section a:hover {
+      background: var(--bg-dark);
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* ==========================================
+       MANIFESTO PREVIEW
+       ========================================== */
+    
+    .manifesto-section {
+      padding: var(--s8) var(--s3);
+      background: radial-gradient(circle at 50% 50%, rgba(255, 0, 127, 0.15) 0%, transparent 70%), var(--bg-dark);
+    }
+    
+    .manifesto-container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .manifesto-container h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: var(--s5);
+      color: var(--text-white);
+    }
+    
+    .manifesto-preview {
+      background: var(--bg-charcoal);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: var(--s5);
+      margin-bottom: var(--s6);
+      text-align: left;
+    }
+    
+    .manifesto-preview p {
+      font-size: 1.125rem;
+      font-style: italic;
+      color: var(--text-gray);
+      line-height: 1.8;
+      margin-bottom: var(--s3);
+    }
+    
+    .manifesto-preview cite {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      text-align: right;
+      display: block;
+      font-style: normal;
+    }
+    
+    /* ==========================================
+       FOOTER
+       ========================================== */
+    
+    footer {
+      background: var(--bg-black);
+      border-top: 1px solid var(--border);
+      padding: var(--s7) var(--s3) var(--s5);
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--s5);
+      margin-bottom: var(--s5);
+    }
+    
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+    
+    .footer-brand h3 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--s1);
+      line-height: 1;
+    }
+    
+    .footer-brand .tagline {
+      color: var(--amber);
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--s3);
+    }
+    
+    .footer-brand p {
+      color: var(--text-gray);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    
+    .footer-section h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--text-white);
+      margin-bottom: var(--s2);
+      line-height: 1;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: var(--s1);
+    }
+    
+    .footer-section a {
+      color: var(--text-gray);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9375rem;
+    }
+    
+    .footer-section a:hover {
+      color: var(--cyan);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: var(--s5);
+      text-align: center;
+    }
+    
+    .footer-bottom p {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin: 0;
+    }
+    
+    /* ==========================================
+       RESPONSIVE BREAKPOINTS
+       ========================================== */
+    
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(5, 5, 5, 0.98);
+        flex-direction: column;
+        padding: var(--s3);
+        border-top: 1px solid var(--border);
+        gap: var(--s3);
+      }
+      
+      .nav-menu.active {
+        display: flex;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .hero {
+        min-height: 80vh;
+        padding: calc(var(--s6) + 60px) var(--s3) var(--s6);
+      }
+      
+      .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .qr-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: var(--s4) var(--s3);
+      }
+      
+      .qr-stats {
+        text-align: center;
+        margin-top: var(--s3);
+      }
+      
+      .pillars-grid,
+      .products-grid,
+      .protocols-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* ==========================================
+       ACCESSIBILITY & PERFORMANCE
+       ========================================== */
+    
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      html {
+        scroll-behavior: auto;
+      }
+    }
+    
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
+    }
+    
+    /* Performance: GPU acceleration for transforms */
+    .btn,
+    .pillar-card,
+    .product-card,
+    .qr-card {
+      will-change: transform;
+    }
+    
+    /* Image optimization placeholder */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="apres-page">
+
+  <!-- NAVIGATION -->
+  <nav class="apres-nav">
+    <div class="nav-container">
+      <a href="https://apresleisure.com/" class="nav-logo">APRES LEISURE</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="https://apresleisure.com/?page_id=38">Manifesto</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#cause">The Cause</a></li>
+        <li><a href="https://apresleisure.ai/" class="nav-cta">LeisureVerse</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-status">// SYSTEM_STATUS: RECLAIMING_AFTERGLOW</div>
+      <h1 class="hero-title">ALL DAY,<br><span class="highlight">EVERY DAY.</span></h1>
+      <p class="hero-subtitle">
+        The adventure is the excuse. The community is the point. Create your AlterEgo, wear the lore, support the causes that matter.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://apresleisure.ai/" class="btn btn-primary">Forge Your AlterEgo</a>
+        <a href="https://apresleisure.com/?page_id=38" class="btn btn-secondary">Read Manifesto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 PILLARS -->
+  <section class="pillars-section">
+    <div class="section-header">
+      <h2>The Three Pillars</h2>
+      <p>Shop, Create, Support</p>
+    </div>
+    <div class="pillars-grid">
+      
+      <article class="pillar-card">
+        <span class="pillar-icon">🛍️</span>
+        <h3>SHOP</h3>
+        <p>
+          Every garment is QR-equipped. Every scan unlocks lore and supports our three causes. Wear the uniform. Signal the movement.
+        </p>
+        <a href="#products" class="pillar-link">Explore Collection</a>
+      </article>
+      
+      <article class="pillar-card">
+        <span class="pillar-icon">🎭</span>
+        <h3>ALTEREGO</h3>
+        <p>
+          Forge your digital identity in the LeisureVerse. Choose your archetype. Planet Rider, Mind Guardian, or Hope Keeper—you decide.
+        </p>
+        <a href="https://apresleisure.ai/" class="pillar-link">Create AlterEgo</a>
+      </article>
+      
+      <article class="pillar-card">
+        <span class="pillar-icon">💚</span>
+        <h3>THE CAUSE</h3>
+        <p>
+          Environmental conservation, mental health support, cancer research. Every scan directs funds where they're needed most.
+        </p>
+        <a href="#cause" class="pillar-link">See Impact</a>
+      </article>
+      
+    </div>
+  </section>
+
+  <!-- PROTOCOLS -->
+  <section class="protocols-section">
+    <div class="protocols-grid">
+      
+      <article class="protocol-card">
+        <div class="protocol-label">Protocol_01</div>
+        <h3>THE SIGNAL</h3>
+        <p>Your gear is the uniform. A visual handshake for the LeisureVerse community that signals you're part of something bigger.</p>
+      </article>
+      
+      <article class="protocol-card">
+        <div class="protocol-label">Protocol_02</div>
+        <h3>THE RITUAL</h3>
+        <p>The scan is the ritual. Every physical piece carries a digital gateway that validates your AlterEgo and supports the cause.</p>
+      </article>
+      
+      <article class="protocol-card">
+        <div class="protocol-label">Protocol_03</div>
+        <h3>ALTEREGO</h3>
+        <p>Claim your archetype. Planet Rider, Mind Guardian, or Hope Keeper—your AlterEgo is your earned identity within the LeisureVerse.</p>
+      </article>
+      
+      <article class="protocol-card featured">
+        <div class="protocol-label">Protocol_04</div>
+        <h3>LEISURVERSE</h3>
+        <p>A cause-led ecosystem. We're a community-driven brand supporting environmental health, mental wellness, and medical research.</p>
+      </article>
+      
+    </div>
+  </section>
+
+  <!-- CAUSE DASHBOARD -->
+  <section id="cause" class="cause-section">
+    <div class="cause-container">
+      
+      <header class="cause-header">
+        <h2>3-QR_CAUSE_ENGINE</h2>
+        <p>// Supporting Planet, Mind & Health // Status: Active</p>
+      </header>
+      
+      <article class="qr-card">
+        <div class="qr-id">01</div>
+        <div class="qr-content">
+          <h4>PLANET RIDER // 1% for the Planet</h4>
+          <p>Supporting environmental conservation and outdoor access. Every scan funds trail maintenance, habitat restoration, and sustainable outdoor recreation initiatives.</p>
+        </div>
+        <div class="qr-stats">
+          Cause: Environmental Health<br>
+          Impact: 1% Revenue + Scan Bonuses
+        </div>
+      </article>
+      
+      <article class="qr-card">
+        <div class="qr-id">02</div>
+        <div class="qr-content">
+          <h4>MIND GUARDIAN // Mental Health Support</h4>
+          <p>Funding mental health resources, outdoor therapy programs, and community wellness initiatives. Breaking stigma through action.</p>
+        </div>
+        <div class="qr-stats">
+          Cause: Mental Wellness<br>
+          Impact: Direct Charity Partnership
+        </div>
+      </article>
+      
+      <article class="qr-card">
+        <div class="qr-id">03</div>
+        <div class="qr-content">
+          <h4>HOPE KEEPER // Cancer Research</h4>
+          <p>Supporting breakthrough cancer research and patient support programs. Every scan contributes to hope, healing, and progress.</p>
+        </div>
+        <div class="qr-stats">
+          Cause: Medical Research<br>
+          Impact: Research Foundation Support
+        </div>
+      </article>
+      
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products-section">
+    <p class="products-label">SIGHTINGS: DROP 01 // Scarcity Engine Active</p>
+    <div class="section-header">
+      <h2>THE COLLECTION</h2>
+      <p>Limited edition. QR-equipped. Supporting the causes with every scan.</p>
+    </div>
+    
+    <div class="products-grid">
+      
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-badge">Limited / 150</span>
+          <div class="product-placeholder">👣</div>
+        </div>
+        <div class="product-info">
+          <h3>The "Sighting" Hero Tee</h3>
+          <p class="product-subtitle">Legend #01 // Sasquatch Edition</p>
+          <p>Version B reveal mark on the back. Heavyweight organic cotton. Every scan unlocks the origin story and supports Planet Rider initiatives.</p>
+          <div class="product-meta">
+            <span class="product-price">$48.00</span>
+            <span class="product-qr">QR 3 Equipped</span>
+          </div>
+          <a href="#" class="product-cta">Add to Collection</a>
+        </div>
+      </article>
+      
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-badge">Collectible</span>
+          <div class="product-placeholder">⬡</div>
+        </div>
+        <div class="product-info">
+          <h3>Legends Hex Patches</h3>
+          <p class="product-subtitle">Full Set // Ghost + Alien + Squatch</p>
+          <p>Numbered collectibles with embedded QR codes. Iron-on backing. Each scan supports Mind Guardian mental health programs.</p>
+          <div class="product-meta">
+            <span class="product-price">$28.00</span>
+            <span class="product-qr">QR 2 Equipped</span>
+          </div>
+          <a href="#" class="product-cta">Add to Collection</a>
+        </div>
+      </article>
+      
+      <article class="product-card">
+        <div class="product-image">
+          <span class="product-badge">Viral Engine</span>
+          <div class="product-placeholder">✨</div>
+        </div>
+        <div class="product-info">
+          <h3>"In The Wild" Sticker Pack</h3>
+          <p class="product-subtitle">Die-Cut Premium // Weather-Proof</p>
+          <p>Sasquatch, Ghost, Alien. Slap these everywhere. Track sightings. Every scan contributes to Hope Keeper cancer research.</p>
+          <div class="product-meta">
+            <span class="product-price">$15.00</span>
+            <span class="product-qr">QR 1 Equipped</span>
+          </div>
+          <a href="#" class="product-cta">Add to Collection</a>
+        </div>
+      </article>
+      
+    </div>
+  </section>
+
+  <!-- ALTEREGO CTA -->
+  <section class="alterego-section">
+    <h2>FORGE YOUR ALTEREGO</h2>
+    <p>Do Not Just Wear The Gear. Become The Lore.</p>
+    <a href="https://apresleisure.ai/">Initiate_Forge</a>
+  </section>
+
+  <!-- MANIFESTO PREVIEW -->
+  <section class="manifesto-section">
+    <div class="manifesto-container">
+      <h2>Why does Apres Leisure exist?</h2>
+      
+      <div class="manifesto-preview">
+        <p>
+          "We exist for the moments between. The unscripted conversations at the trailhead. The quiet reverence at sunrise. The shared laughter after the adventure. These moments create community, and community creates meaning. Apres Leisure is built to celebrate, protect, and fund the spaces where these connections happen."
+        </p>
+        <cite>— From Document // 02: The LeisureVerse Manifesto</cite>
+      </div>
+      
+      <a href="https://apresleisure.com/?page_id=38" class="btn btn-primary">Read Full Manifesto</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h3>APRES LEISURE</h3>
+          <p class="tagline">"BRING IT EVERYWHERE"</p>
+          <p>
+            A cause-led outdoor lifestyle brand. Create your AlterEgo in the LeisureVerse, wear QR-equipped gear, and support environmental conservation, mental health, and cancer research with every scan. Monthly SLC gatherings. Quarterly destination trips.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://apresleisure.ai/">LeisureVerse (Create Avatar)</a></li>
+            <li><a href="#products">Shop Collection</a></li>
+            <li><a href="https://apresleisure.com/?page_id=38">Read Manifesto</a></li>
+            <li><a href="#cause">The 3-QR Cause Engine</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>The Cause</h4>
+          <ul>
+            <li><a href="#cause">Planet Rider (1% for the Planet)</a></li>
+            <li><a href="#cause">Mind Guardian (Mental Health)</a></li>
+            <li><a href="#cause">Hope Keeper (Cancer Research)</a></li>
+            <li><a href="#">Impact Report</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Discord Community</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 Apres Leisure LLC // All Day, Every Day // Salt Lake City, UT</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- Optimized JavaScript - Vanilla, No Dependencies -->
+<script>
+(function() {
+  'use strict';
+  
+  // Mobile navigation toggle
+  var navToggle = document.getElementById('navToggle');
+  var navMenu = document.getElementById('navMenu');
+  
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    var navLinks = navMenu.querySelectorAll('a');
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].addEventListener('click', function() {
+        navMenu.classList.remove('active');
+      });
+    }
+  }
+  
+  // Smooth scroll for anchor links
+  var anchorLinks = document.querySelectorAll('a[href^="#"]');
+  for (var i = 0; i < anchorLinks.length; i++) {
+    anchorLinks[i].addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if (target) {
+          var navHeight = document.querySelector('.apres-nav').offsetHeight;
+          var targetPosition = target.offsetTop - navHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  }
+  
+})();
+</script>
+
+</body>
+</html>
