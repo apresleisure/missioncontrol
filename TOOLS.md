@@ -42,3 +42,22 @@ Add whatever helps you do your job. This is your cheat sheet.
 ## Related
 
 - [Agent workspace](/concepts/agent-workspace)
+// tools/dynamicShippingEngine.js
+module.exports = {
+  calculateWorstCaseMargin: (retailPrice, baseCost) => {
+    const SHIPPING_BUFFER = 850; // $8.50 worst-case individual softgood shipping
+    const BUNDLE_DISCOUNT = 0.75; // 25% off auto-trigger for $150+ carts
+    
+    const worstCaseRetail = (retailPrice * BUNDLE_DISCOUNT) / 100;
+    const baseCostDec = baseCost / 100;
+    const shippingDec = SHIPPING_BUFFER / 100;
+    
+    const netMargin = worstCaseRetail - baseCostDec - shippingDec;
+    const marginPercentage = (netMargin / worstCaseRetail) * 100;
+    
+    return {
+      safe: marginPercentage >= 40,
+      actualMargin: marginPercentage
+    };
+  }
+};

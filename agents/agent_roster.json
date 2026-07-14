@@ -1,0 +1,22 @@
+{
+  "agents": [
+    {
+      "id": "cto_agent",
+      "role": "Technical Architect",
+      "specialty": "Replit, Webhooks, and GitHub Sync",
+      "focus": "Automating the Command Center and ensuring clean code."
+    },
+    {
+      "id": "lore_agent",
+      "role": "Legend Historian",
+      "specialty": "Sighting Reports & Alter Egos",
+      "focus": "Writing mythic copy for Legend Forge and social drops."
+    },
+    {
+      "id": "ops_agent",
+      "role": "Revenue Operative",
+      "specialty": "Shopify & Printful Automation",
+      "focus": "Moving orders and tracking the print queue without user burn."
+    }
+  ]
+}

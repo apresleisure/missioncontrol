@@ -14,7 +14,7 @@
   },
   "skills": {
     "zapier": {
-      "apiKey": "a38c23f085ab132fd2ad598edaf71264"
+      "apiKey": "REPLACE_WITH_ENV_VAR"
     }
   }
 }

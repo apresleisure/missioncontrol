@@ -2,17 +2,22 @@
 
 ## Core Context
 - **Brand:** Apres Leisure
-- **Mission:** Reclaiming the Afterglow; Protecting the Third Place.
+- **Mission:** Reclaiming the Afterglow; Protecting the Third Place. Forging Legends.
 - **System:** Triple-QR Viral Engine (Trial, Promo, Drop).
 
 ## Critical Rules for AI Agents
 - **Source of Truth:** Always prioritize information in the `wiki/` folder.
 - **Immutable Data:** Never modify files in `raw/`. These are your evidence files.
 - **Synthesis:** When I add new files to `raw/`, suggest updates to the `wiki/` files.
-- **Tone:** Premium Alpine—minimal, mythic, and restrained. No "hype" language.
+- **Tone:** all-terrain—minimal, mythic, playful and restrained. Not so much "hype" language.
 - **Links:** Use [[page-name]] format to connect ideas.
+- **Designations:** The "LeisureVerse" is a category built for our "Apres Culture" community universe. We encourage new "Legends" (Founding variety for a limited time) to join and create their "Apres Alter Ego" (technology forthcoming) by way of "Apres Access." 
 
 ## Folder Structure
-- `raw/`: Dump area for [Logo Drafts](https://drive.google.com/drive/folders/11ptIHeOzzjaypHZfAB61fhYXZpu12kZB), strategy PDFs, and survey data.
-- `wiki/`: The living [Brand Bible](https://chatgpt.com/g/g-p-699cfc907b1c8191900e302c2de9a403/c/69a7a0a7-5cd0-83e8-9664-af5526cb55e9).
-- `outputs/`: Finished [Pitch Decks](https://chatgpt.com/g/g-p-699cfc907b1c8191900e302c2de9a403/c/69a7a0a7-5cd0-83e8-9664-af5526cb55e9) and content calendars.
+- `raw/`: Dump area for [Logos](https://drive.google.com/drive/u/0/folders/1UqwJPAPQF4-uSEElvtxTr-iJ98LcBdRx.
+Dump area for (Social Videos)(https://drive.google.com/drive/folders/1LEViU2PerUZWuqjuMowAts0lzHK3XW6k), upload to build audience via social, site.
+- `wiki/`: The living [Brand Bible](https://docs.google.com/document/d/1TB9HyjkEHt9EGiiKgPFIKYwlLilZmRg464weKfMqCgs/edit?tab=t.0.
+- '30 day moonshot operating document/': https://docs.google.com/document/d/1XpFwxyZkd32KOqLKcGTrCYEKjELvng6FrKA2FWwuPZE/edit?tab=t.0
+- 'AI Bookmarks for best practices: https://docs.google.com/document/d/1pH7yHLbRDQFL7EcrJ29Z-ZePlgi9GIF6LPwa7wj3d6M/edit?tab=t.0
+- `outputs/`: Finished [marketing videos](https://drive.google.com/drive/u/0/folders/1XKnjwi3GZXjM2aPWzjJIc8oNbdSBm0lb and content calendars.
+

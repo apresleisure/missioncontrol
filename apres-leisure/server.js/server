@@ -1,0 +1,105 @@
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
+
+// 1. Core Engines - Pathing strictly maps to your subfolder
+const { generateTrackingQR } = require('./apres-leisure/Engines/QRgenerator');
+const { craftVanguardInvite } = require('./apres-leisure/Engines/vanguardoutreach');
+const { generateVisualBrief } = require('./apres-leisure/Engines/contentEngine'); // Kept for your Pinterest Loop
+
+const app = express();
+app.use(express.json()); // Essential to parse incoming webhook payloads from Make.com
+
+// Load global terrain-agnostic state rules
+const statePath = path.join(__dirname, './apres-leisure/config/apres-state.json');
+const state = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+
+/**
+ * @route   POST /webhook/vanguard-recruitment
+ * @desc    Catches incoming Make.com influencer data, stamps a live vector QR code 
+ *          to disk, and returns tailored lifestyle vanguard outreach copy.
+ */
+app.post('/webhook/vanguard-recruitment', (req, res) => {
+    try {
+        const { username, name, specialty } = req.body;
+
+        // Fail early if critical routing identifiers are missing
+        if (!username || !name) {
+            return res.status(400).json({
+                success: false,
+                error: "Missing required parameters: 'username' and 'name' must be provided."
+            });
+        }
+
+        console.log(`\n⚡ [WEBHOOK] Processing Inbound Specialist: ${username}`);
+
+        // Step 1: Fire up the local vector asset generator
+        const qrAssets = generateTrackingQR(username);
+
+        // Step 2: Once the file stream finishes writing cleanly to disk
+        qrAssets.writeStream.on('finish', () => {
+            console.log(`✅ Asset written to disk: ${qrAssets.fileName}`);
+
+            // Step 3: Bundle profile context for the copy customizer
+            const structuralTarget = {
+                username,
+                name,
+                specialty: specialty || "all-terrain operator",
+                partnership_terms: {
+                    assigned_qr: qrAssets.url
+                }
+            };
+
+            // Step 4: Run the compiler to tailor the lifestyle activation message
+            const compiledOutreach = craftVanguardInvite(structuralTarget);
+
+            // Step 5: Respond back to Make.com with the payload to pass to Klaviyo
+            return res.status(200).json({
+                success: true,
+                meta: {
+                    brand: state.brand_rules.name,
+                    tracking_node: qrAssets.url,
+                    local_asset_path: qrAssets.qrCodePath
+                },
+                outreach: {
+                    recipient: compiledOutreach.recipient,
+                    message: compiledOutreach.templated_message
+                }
+            });
+        });
+
+        // Track write errors
+        qrAssets.writeStream.on('error', (streamErr) => {
+            console.error("❌ File System Stream Error:", streamErr);
+            return res.status(500).json({ success: false, error: "Failed to write QR vector to server disk." });
+        });
+
+    } catch (globalErr) {
+        console.error("❌ Critical Integration Error:", globalErr);
+        return res.status(500).json({ success: false, error: "Internal automation core configuration error." });
+    }
+});
+
+/**
+ * @route   POST /webhook/content-generation
+ * @desc    Maintains your Pinterest Content Loop system
+ */
+app.post('/webhook/content-generation', (req, res) => {
+    const { item, setting } = req.body;
+    
+    if (!item || !setting) {
+        return res.status(400).json({ error: "Missing required creative inputs." });
+    }
+
+    console.log(`\n📌 [WEBHOOK] Triggering Pinterest Content Loop for item: ${item}`);
+    const brief = generateVisualBrief(item, setting);
+    res.json({ status: "success", data: brief });
+});
+
+// Start unified automation engine
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`\n==================================================`);
+    console.log(`🚀 APRES LEISURE LOOP ENGINE RUNNING ON PORT ${PORT}`);
+    console.log(`==================================================`);
+});

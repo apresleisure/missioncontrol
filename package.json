@@ -1,0 +1,25 @@
+{
+  "name": "apres-leisure-brain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apresleisure/missioncontrol.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/apresleisure/missioncontrol/issues"
+  },
+  "homepage": "https://github.com/apresleisure/missioncontrol#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "qr-image": "^3.2.0"
+  }
+}

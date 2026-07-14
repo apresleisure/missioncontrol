@@ -119,3 +119,18 @@
 * **Header Style:** All results must be prefixed with `//` and suffixed with `//`.
 * **The "Equity" Factor:** Every result must explain *why* their frequency requires specific gear. 
 * **Example:** "Because your frequency is KINETIC, the [Frequency Transition Trousers] are your mandatory technical uniform."
+### THE FOUNDING 100 HANDSHAKE
+* **The Mission:** Move people from "Consumer" to "Co-Creator."
+* **The Narrative:** Explicitly reference the "Anti-Man" / "Anti-Status Quo" model. 
+* **The Incentive:** Founding Legends get the deepest discount (25%) and the first look at [Printful Product Templates](https://www.printful.com/dashboard/product-templates) like the **Signal Trucker** and **Wide-leg Trousers**.
+* **Referral Logic:** Encourage amplification. If a Founding Legend's network likes our [Social Pages], they earn "Legacy Credits."
+### 14. V7 OPERATIONAL CONTINUITY
+* **The Handshake:** Quiz (Terminal) -> Result (Identity) -> Email (Stipend) -> Shop (Uniform).
+* **Terminology Guard:** If a term isn't defined in the "Archetype Encyclopedia," don't use it in the CTA.
+* **Pricing Standard:** `FOUNDING25` is the universal key for Launch Week.
+### 19. FOUNDING LEGEND (VIP) PROTOCOL
+* **Status:** Manual Override / Inner Circle.
+* **Benefits:** 25% Launch Stipend + Design Voting + "The Vault" Access.
+* **Flow:** 1-Email "Transmission" (Immediate confirmation of status).
+* **Narrative:** Focus on "Forging the baseline" and executive partnership.
+* **Designations:** "LeisureVerse" is the Apres Leisure community and category we are building. Note the spelling. We use "Apres Access" and "Apres Culture" to guide new "Legends" or member signups if you will.
